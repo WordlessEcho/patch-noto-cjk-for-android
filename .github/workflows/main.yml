@@ -62,6 +62,7 @@ jobs:
       - name: Patch for Android
         run: python ./subset-script/scripts/subset_fonts.py -o ./subset4android ./eas/*
 
+      # afdko install by nototools https://github.com/notofonts/nototools/blob/cd79db632c9a506ad61ae72bfad5875341ca56b8/requirements.txt#L1
       - name: Read fonts in .ttc
         run: |
           for file in ./subset4android/*.ttc; do
@@ -70,6 +71,7 @@ jobs:
             cat $file-font-list.txt
           done
 
+      # fonttools install by nototools https://github.com/notofonts/nototools/blob/cd79db632c9a506ad61ae72bfad5875341ca56b8/requirements.txt#L13
       - name: Output tables of name, OS/2 and fvar
         run: |
           ls -1 -I "*-font-list.txt" -I "*.ttx" ./subset4android/ | while read file; do
