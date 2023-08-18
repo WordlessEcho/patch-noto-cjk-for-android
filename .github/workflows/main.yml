@@ -70,7 +70,7 @@ jobs:
             cat $file-font-list.txt
           done
 
-      - name: Output tables of name and fvar
+      - name: Output tables of name, OS/2 and fvar
         run: |
           ls -1 -I "*-font-list.txt" -I "*.ttx" ./subset4android/ | while read file; do
             if [[ "$file" == *.ttc ]]; then
