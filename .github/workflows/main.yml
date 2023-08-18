@@ -68,6 +68,7 @@ jobs:
         with:
           path: './current'
 
+      # https://unix.stackexchange.com/a/277154
       - name: Copy changed font
         run: |
           cmake -E make_directory ./current/${{ vars.FONT_DIR }}
