@@ -60,6 +60,7 @@ jobs:
             scripts/subset_fonts.py
           sparse-checkout-cone-mode: false
 
+      # Modified from: https://cs.android.com/android/platform/superproject/main/+/main:external/noto-fonts/scripts/subset_noto_cjk.py;drc=d8536c6637d9506ccd8ffb09810ceb7e864e20d8
       - name: Patch for Android
         run: python ./subset-script/scripts/subset_fonts.py -o ./subset4android ./eas/*
 
