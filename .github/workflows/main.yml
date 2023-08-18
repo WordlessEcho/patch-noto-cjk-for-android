@@ -62,6 +62,27 @@ jobs:
       - name: Patch for Android
         run: python ./subset-script/scripts/subset_fonts.py -o ./subset4android ./eas/*
 
+      - name: Read fonts in .ttc
+        run: |
+          for file in ./subset4android/*.ttc; do
+            otc2otf -r $file | grep Font > $file-font-list.txt
+            echo $file-font-list.txt
+            cat $file-font-list.txt
+          done
+
+      - name: Output TTX
+        run: |
+          ls -1 -I "*-font-list.txt" -I "*.ttx" ./subset4android/ | while read file; do
+            if [[ "$file" == *.ttc ]]; then
+              for INDEX in {0..$(($(wc -l < ./subset4android/$file-font-list.txt) - 1))}; do
+                ttx -y $INDEX -t name -t fvar -o ./subset4android/$file-$INDEX.ttx ./subset4android/$file
+              done
+            else
+              ttx -t name -t fvar ./subset4android/$file
+            fi
+          done
+          ls ./subset4android/
+
       - uses: actions/upload-artifact@v3
         with:
           name: fonts
