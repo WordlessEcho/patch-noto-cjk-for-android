@@ -7,10 +7,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
-
     steps:
       - name: Get fonts
         run: |
@@ -64,19 +60,33 @@ jobs:
       - name: Patch for Android
         run: python ./subset-script/scripts/subset_fonts.py -o ./subset4android ./eas/*
 
-      - name: Checkout current repo
-        uses: actions/checkout@v3
+      - uses: actions/upload-artifact@v3
         with:
-          path: './current'
+          name: fonts
+          path: ./subset4android/
 
-      # https://unix.stackexchange.com/a/277154
-      - name: Copy changed font
-        run: |
-          cmake -E make_directory ./current/${{ vars.FONT_DIR }}
-          cp ./subset4android/* ./current/${{ vars.FONT_DIR }}
+  push:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: fonts
+          path: ${{ vars.FONT_DIR }}
 
       - name: Push new fonts
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update fonts ${{ vars.FONT_DIR }}
-          repository: ./current
+
+      - uses: geekyeggo/delete-artifact@v2
+        with:
+          name: fonts
+          failOnError: false
