@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Get fonts
-        run: mkdir ./fonts && cd ./fonts && echo ${{ vars.FONT_LINKS }} | while IFS=' ' read -r -a link ; do curl -OL $link; done
+        run: mkdir ./fonts && cd ./fonts && for link in $(echo ${{ vars.FONT_LINKS }}) ; do curl -OL $link ; done && ls ./fonts/
 
       # https://github.com/fonttools/unicodedata2/issues/52
       - name: Set up Python 3.10
