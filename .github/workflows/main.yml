@@ -72,6 +72,7 @@ jobs:
           done
 
       # fonttools install by nototools https://github.com/notofonts/nototools/blob/cd79db632c9a506ad61ae72bfad5875341ca56b8/requirements.txt#L13
+      # More about OpenType tables: https://learn.microsoft.com/en-us/typography/opentype/spec/
       - name: Output tables of name, OS/2 and fvar
         run: |
           ls -1 -I "*-font-list.txt" -I "*.ttx" ./subset4android/ | while read file; do
