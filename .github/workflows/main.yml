@@ -70,11 +70,11 @@ jobs:
             cat $file-font-list.txt
           done
 
-      - name: Output TTX
+      - name: Output tables of name and fvar
         run: |
           ls -1 -I "*-font-list.txt" -I "*.ttx" ./subset4android/ | while read file; do
             if [[ "$file" == *.ttc ]]; then
-              for INDEX in {0..$(($(wc -l < ./subset4android/$file-font-list.txt) - 1))}; do
+              for INDEX in $(seq 0 $(($(wc -l < ./subset4android/$file-font-list.txt) - 1))); do
                 ttx -y $INDEX -t name -t fvar -o ./subset4android/$file-$INDEX.ttx ./subset4android/$file
               done
             else
