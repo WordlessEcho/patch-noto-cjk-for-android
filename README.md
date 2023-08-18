@@ -10,9 +10,9 @@ Patch Noto CJK & Source Han for Android by GitHub Action.
 2. [Trigger GitHub Actions by manual](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow).
 
 # How it works
-- Remove codepoints of Emoji to display Emoji by Noto Emoji and Latin characters to display Latin characters by Roboto. ([subset_noto_cjk.py](https://cs.android.com/android/platform/superproject/main/+/main:external/noto-fonts/scripts/subset_noto_cjk.py;drc=d8536c6637d9506ccd8ffb09810ceb7e864e20d8) from AOSP)
-
 - Add chws, vchw, halt and vhal by tool [East Asian Contextual Spacing](https://github.com/kojiishi/east_asian_spacing#opentype-font-features). (For more, see README in tool)
+
+- Remove codepoints of Emoji to display Emoji by Noto Emoji and Latin characters to display Latin characters by Roboto. ([subset_noto_cjk.py](https://cs.android.com/android/platform/superproject/main/+/main:external/noto-fonts/scripts/subset_noto_cjk.py;drc=d8536c6637d9506ccd8ffb09810ceb7e864e20d8) from AOSP)
 
 # Notes
 You will always get new SHA256 everytime you run this script. Even if the sources doesn't change. I guess afdko should be blamed?
