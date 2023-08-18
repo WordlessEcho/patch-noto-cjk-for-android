@@ -7,6 +7,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      contents: write
+
     steps:
       - name: Get fonts
         run: mkdir ./fonts && cd ./fonts && for link in $(echo ${{ vars.FONT_LINKS }}) ; do curl -OL $link ; done && ls
