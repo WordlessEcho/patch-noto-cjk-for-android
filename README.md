@@ -2,12 +2,18 @@
 Patch Noto CJK & Source Han for Android by GitHub Action.
 
 # Usage
-1. Fork this repo then add [two variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository)
+1. [Fork this repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) **without** option 'copy the `main` branch only'.
+
+2. [Create a branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) based on `script`.
+
+3. [Set new branch as default](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
+
+4. Add [two variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for GitHub Actions
 
 - `FONT_DIR`: `noto/serif/2.002` (The directory you want)
 - `FONT_LINKS`: `https://github.com/notofonts/noto-cjk/raw/Serif2.002/Serif/Variable/OTC/NotoSerifCJK-VF.otf.ttc https://github.com/notofonts/noto-cjk/raw/Serif2.002/Serif/OTC/NotoSerifCJK-Regular.ttc` (Split multiple links by space)
 
-2. [Trigger GitHub Actions by manual](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow).
+5. [Trigger GitHub Actions by manual](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow).
 
 # How it works
 - Add chws, vchw, halt and vhal by tool [East Asian Contextual Spacing](https://github.com/kojiishi/east_asian_spacing#opentype-font-features). (For more, see README in tool)
