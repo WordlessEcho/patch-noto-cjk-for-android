@@ -1,0 +1,5 @@
+Font 0: NotoSerifCJKjp-Regular.otf
+Font 1: NotoSerifCJKkr-Regular.otf
+Font 2: NotoSerifCJKsc-Regular.otf
+Font 3: NotoSerifCJKtc-Regular.otf
+Font 4: NotoSerifCJKhk-Regular.otf
