@@ -6,9 +6,9 @@ Patch Noto CJK & Source Han for Android by GitHub Action.
 
 2. [Create a branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) based on `script`.
 
-3. [Set new branch as default](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
+3. [Set new branch as default](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch).
 
-4. Add [two variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for GitHub Actions
+4. Add [two variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for GitHub Actions:
 
 - `FONT_DIR`: `noto/serif/2.002` (The directory you want)
 - `FONT_LINKS`: `https://github.com/notofonts/noto-cjk/raw/Serif2.002/Serif/Variable/OTC/NotoSerifCJK-VF.otf.ttc https://github.com/notofonts/noto-cjk/raw/Serif2.002/Serif/OTC/NotoSerifCJK-Regular.ttc` (Split multiple links by space)
