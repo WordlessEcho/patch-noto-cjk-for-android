@@ -52,13 +52,21 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
+      - name: Get subset_fonts.py
+        uses: actions/checkout@v3
+        with:
+          path: './subset-script'
+          sparse-checkout: |
+            scripts/subset_fonts.py
+          sparse-checkout-cone-mode: false
+
+      - name: Patch for Android
+        run: python ./subset-script/scripts/subset_fonts.py -o ./subset4android ./eas/*
+
       - name: Checkout current repo
         uses: actions/checkout@v3
         with:
           path: './current'
-
-      - name: Patch for Android
-        run: python ./current/scripts/subset_fonts.py -o ./subset4android ./eas/*
 
       - name: Copy changed font
         run: |
