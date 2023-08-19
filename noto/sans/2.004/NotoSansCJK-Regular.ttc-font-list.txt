@@ -1,0 +1,10 @@
+Font 0: NotoSansCJKjp-Regular.otf
+Font 1: NotoSansCJKkr-Regular.otf
+Font 2: NotoSansCJKsc-Regular.otf
+Font 3: NotoSansCJKtc-Regular.otf
+Font 4: NotoSansCJKhk-Regular.otf
+Font 5: NotoSansMonoCJKjp-Regular.otf
+Font 6: NotoSansMonoCJKkr-Regular.otf
+Font 7: NotoSansMonoCJKsc-Regular.otf
+Font 8: NotoSansMonoCJKtc-Regular.otf
+Font 9: NotoSansMonoCJKhk-Regular.otf

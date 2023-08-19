@@ -1,0 +1,5 @@
+Font 0: NotoSansCJKjp-Thin.otf
+Font 1: NotoSansCJKkr-Thin.otf
+Font 2: NotoSansCJKsc-Thin.otf
+Font 3: NotoSansCJKtc-Thin.otf
+Font 4: NotoSansCJKhk-Thin.otf
