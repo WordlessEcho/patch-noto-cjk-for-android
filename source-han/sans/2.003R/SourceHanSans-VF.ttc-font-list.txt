@@ -1,0 +1,5 @@
+Font 0: SourceHanSans-Variable.otf
+Font 1: SourceHanSansHC-Variable.otf
+Font 2: SourceHanSansK-Variable.otf
+Font 3: SourceHanSansSC-Variable.otf
+Font 4: SourceHanSansTC-Variable.otf

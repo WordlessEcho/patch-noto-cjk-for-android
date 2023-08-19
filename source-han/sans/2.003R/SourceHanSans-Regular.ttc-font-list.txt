@@ -1,0 +1,10 @@
+Font 0: SourceHanSans-Regular.otf
+Font 1: SourceHanSansK-Regular.otf
+Font 2: SourceHanSansSC-Regular.otf
+Font 3: SourceHanSansTC-Regular.otf
+Font 4: SourceHanSansHC-Regular.otf
+Font 5: SourceHanSansHW-Regular.otf
+Font 6: SourceHanSansHWK-Regular.otf
+Font 7: SourceHanSansHWSC-Regular.otf
+Font 8: SourceHanSansHWTC-Regular.otf
+Font 9: SourceHanSansHWHC-Regular.otf
