@@ -86,7 +86,7 @@ jobs:
           done
           ls ./subset4android/
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: fonts
           path: ./subset4android/
@@ -106,10 +106,10 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
-          name: fonts
           path: ${{ vars.FONT_DIR }}
+          pattern: fonts
 
       - name: Push new fonts
         uses: stefanzweifel/git-auto-commit-action@v4
