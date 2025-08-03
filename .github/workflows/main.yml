@@ -108,8 +108,8 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
+          name: fonts
           path: ${{ vars.FONT_DIR }}
-          pattern: fonts
 
       - name: Push new fonts
         uses: stefanzweifel/git-auto-commit-action@v4
